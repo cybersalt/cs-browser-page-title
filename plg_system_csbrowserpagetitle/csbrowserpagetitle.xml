@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" method="upgrade">
+    <name>plg_system_csbrowserpagetitle</name>
+    <author>Cybersalt</author>
+    <creationDate>2026-01-03</creationDate>
+    <copyright>(C) 2026 Cybersalt. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>info@cybersalt.org</authorEmail>
+    <authorUrl>https://www.cybersalt.org</authorUrl>
+    <version>1.0.0</version>
+    <description>PLG_SYSTEM_CSBROWSERPAGETITLE_XML_DESCRIPTION</description>
+    <namespace path="src">Cybersalt\Plugin\System\CsBrowserPageTitle</namespace>
+
+    <files>
+        <folder plugin="csbrowserpagetitle">services</folder>
+        <folder>src</folder>
+    </files>
+
+    <languages>
+        <language tag="en-GB">language/en-GB/plg_system_csbrowserpagetitle.ini</language>
+        <language tag="en-GB">language/en-GB/plg_system_csbrowserpagetitle.sys.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="custom_field_id"
+                    type="sql"
+                    default=""
+                    label="PLG_SYSTEM_CSBROWSERPAGETITLE_FIELD_CUSTOM_FIELD_LABEL"
+                    description="PLG_SYSTEM_CSBROWSERPAGETITLE_FIELD_CUSTOM_FIELD_DESC"
+                    query="SELECT id, title FROM #__fields WHERE context = 'com_content.article' AND state = 1 ORDER BY title"
+                    key_field="id"
+                    value_field="title"
+                >
+                    <option value="">PLG_SYSTEM_CSBROWSERPAGETITLE_FIELD_SELECT_OPTION</option>
+                </field>
+                <field
+                    name="fallback_to_title"
+                    type="radio"
+                    default="1"
+                    label="PLG_SYSTEM_CSBROWSERPAGETITLE_FIELD_FALLBACK_LABEL"
+                    description="PLG_SYSTEM_CSBROWSERPAGETITLE_FIELD_FALLBACK_DESC"
+                    layout="joomla.form.field.radio.switcher"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
