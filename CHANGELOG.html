@@ -1,0 +1,43 @@
+<div class="changelog-container">
+    <h1>CS Browser Page Title - Changelog</h1>
+
+    <div class="intro">
+        <p><strong>All notable changes to CS Browser Page Title will be documented in this file.</strong></p>
+        <p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>, and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+    </div>
+
+    <h2>
+        <span class="version-badge">v1.0.0</span>
+        <span class="date">2026-01-03</span>
+    </h2>
+
+    <h3><span class="section-icon">🚀</span> New Features</h3>
+    <ul>
+        <li><strong>Initial Release</strong>: Joomla 5 system plugin to set browser page title from custom field value</li>
+        <li><strong>Custom Field Selection</strong>: SQL-based dropdown to select any article custom field
+            <ul>
+                <li>Lists all published custom fields for articles</li>
+                <li>Easy configuration in plugin settings</li>
+            </ul>
+        </li>
+        <li><strong>Site Name Handling</strong>: Respects Joomla's global "Site Name in Page Titles" setting
+            <ul>
+                <li>Site name before page title</li>
+                <li>Site name after page title</li>
+                <li>No site name</li>
+            </ul>
+        </li>
+        <li><strong>Fallback Option</strong>: Configurable option to leave default title unchanged if custom field is empty</li>
+        <li><strong>System Plugin Architecture</strong>: Uses <code>onAfterRender</code> event to modify final HTML output
+            <ul>
+                <li>Guarantees title changes are not overwritten by Joomla's article view</li>
+                <li>Fires after ALL rendering is complete</li>
+            </ul>
+        </li>
+        <li><strong>DatabaseAwareTrait</strong>: Direct database queries to fetch custom field values from <code>#__fields_values</code> table</li>
+    </ul>
+
+    <div class="footer">
+        <p>&copy; 2026 Cybersalt. All rights reserved.</p>
+    </div>
+</div>
