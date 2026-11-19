@@ -7,6 +7,21 @@
     </div>
 
     <h2>
+        <span class="version-badge">Unreleased</span>
+    </h2>
+
+    <h3><span class="section-icon">🔧</span> Improvements</h3>
+    <ul>
+        <li><strong>Support settings</strong>: New "Support" tab in the plugin settings with support email, support URL and support label (Cybersalt defaults)</li>
+    </ul>
+
+    <h3><span class="section-icon">🐛</span> Fixes</h3>
+    <ul>
+        <li><strong>Site name position</strong>: "Site Name in Page Titles" now matches Joomla's own values, so "before" puts the site name before the title and "after" puts it after (the two were swapped, and "none" showed the site name)</li>
+        <li><strong>Fallback to Article Title</strong>: The option now does what it says. When the custom field is empty, the article's own Browser Page Title option (or its title) is used, unless the menu item linking to that article has its own Browser Page Title, which is never overridden; with the option off, Joomla's default title is left alone</li>
+    </ul>
+
+    <h2>
         <span class="version-badge">v1.0.0</span>
         <span class="date">2026-01-03</span>
     </h2>

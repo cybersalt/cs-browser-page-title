@@ -48,6 +48,36 @@
                     <option value="1">JYES</option>
                 </field>
             </fieldset>
+            <fieldset
+                name="support"
+                label="PLG_SYSTEM_CSBROWSERPAGETITLE_FIELDSET_SUPPORT"
+                description="PLG_SYSTEM_CSBROWSERPAGETITLE_FIELDSET_SUPPORT_DESC"
+            >
+                <field
+                    name="support_email"
+                    type="email"
+                    default="support@cybersalt.com"
+                    label="PLG_SYSTEM_CSBROWSERPAGETITLE_FIELD_SUPPORT_EMAIL_LABEL"
+                    description="PLG_SYSTEM_CSBROWSERPAGETITLE_FIELD_SUPPORT_EMAIL_DESC"
+                    validate="email"
+                />
+                <field
+                    name="support_url"
+                    type="url"
+                    default="https://www.cybersalt.com/services/support-request-form"
+                    label="PLG_SYSTEM_CSBROWSERPAGETITLE_FIELD_SUPPORT_URL_LABEL"
+                    description="PLG_SYSTEM_CSBROWSERPAGETITLE_FIELD_SUPPORT_URL_DESC"
+                    validate="url"
+                    filter="url"
+                />
+                <field
+                    name="support_label"
+                    type="text"
+                    default="Cybersalt support"
+                    label="PLG_SYSTEM_CSBROWSERPAGETITLE_FIELD_SUPPORT_LABEL_LABEL"
+                    description="PLG_SYSTEM_CSBROWSERPAGETITLE_FIELD_SUPPORT_LABEL_DESC"
+                />
+            </fieldset>
         </fields>
     </config>
 </extension>
